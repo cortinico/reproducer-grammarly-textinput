@@ -11,6 +11,7 @@ import com.ncorti.kotlin.template.app.databinding.ActivityMainBinding
 import com.ncorti.kotlin.template.library.FactorialCalculator
 import com.ncorti.kotlin.template.library.android.NotificationUtil
 import java.lang.IllegalStateException
+import java.lang.Integer.min
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,38 +24,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.editTextFactorial.addTextChangedListener({ text: CharSequence?, start: Int, count: Int, after: Int ->
-//            Log.wtf("NCOR", "[before]: $text - start: $start - count: $count - after: $after")
+            Log.wtf("TEXT-BEFORE", "${text?.length} - start: $start - count: $count - after: $after - text ${text?.substring(0, min(50, text.length))}")
         }, { text: CharSequence?, start: Int, before: Int, count: Int ->
-            Log.wtf("NCOR", "[on]: ${text?.length} - start: $start - before: $before - count: $count")
-//            Log.wtf("NCOR", "[content]: $text")
+            Log.wtf("TEXT-ON", "${text?.length} - start: $start - before: $before - count: $count - text ${text?.substring(0, min(50, text.length))}")
         }, { text ->
-//            Log.wtf("NCOR", "[after]: $text")
+            Log.wtf("TEXT-AFTER", "[after]: ${text?.length} - text ${text?.substring(0, min(50, text.length))}")
         })
-
-        binding.buttonCompute.setOnClickListener {
-//            if (binding.editTextFactorial.text.isNotEmpty()) {
-//                val input = binding.editTextFactorial.text.toString().toLong()
-//                val result = try {
-//                    FactorialCalculator.computeFactorial(input).toString()
-//                } catch (ex: IllegalStateException) {
-//                    "Error: ${ex.message}"
-//                }
-//
-//                binding.textResult.text = result
-//                binding.textResult.visibility = View.VISIBLE
-//                notificationUtil.showNotification(
-//                    context = this,
-//                    title = getString(R.string.notification_title),
-//                    message = result
-//                )
-//            } else {
-//                Toast.makeText(this, "Please enter a number", Toast.LENGTH_SHORT).show()
-//            }
-        }
-
-        binding.buttonAppcompose.setOnClickListener {
-//            val intent = Intent(it.context, ComposeActivity::class.java)
-//            startActivity(intent)
-        }
     }
 }
