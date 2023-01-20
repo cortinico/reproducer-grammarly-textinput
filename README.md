@@ -20,3 +20,7 @@ Clone the repo and install with:
 3. Open the app and tap on the text input.
 4. Copy paste a wall of text (like a Lorem Ipsum)
 5. Start typing and the ANR will happen.
+
+<p align="center">
+  <img src="assets/reproducervideo.gif" alt="gif" width="50%"/>
+</p>
