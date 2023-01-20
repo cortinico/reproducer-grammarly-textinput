@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kotlin Android Template</string>
+    <string name="title">This is just a template</string>
+    <string name="description">Type a wall of text on a Samsung device, with Samsung Keyboard and Grammarly integration to trigger the ANR.</string>
+    <string name="start_typing">Start typing…</string>
+</resources>
