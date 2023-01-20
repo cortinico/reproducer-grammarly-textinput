@@ -3,6 +3,8 @@
 This repro contain a reproducer for a ANR with the Samsung Keyboard with Grammarly integration turned on.
 The repo contains a vanilla Android app.
 
+Credits to [@NickGerleman](https://github.com/NickGerleman) for discovering it.
+
 ## How to install
 
 Clone the repo and install with:
