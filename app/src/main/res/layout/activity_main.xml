@@ -27,6 +27,7 @@
         app:layout_constraintBottom_toTopOf="@id/edit_text"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- inputType="textMultiLine" is critical to trigger the ANR -->
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
